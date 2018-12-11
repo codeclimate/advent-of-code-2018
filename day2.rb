@@ -1,6 +1,8 @@
+#!/usr/bin/ruby
+
 counters = Hash.new(0)
 
-File.read("./input.txt").lines do |line|
+File.read("./day2_input.txt").lines do |line|
   counter = line.strip.split("").
             group_by{ |e| e }.
             map { |k, dups|[k, dups.size] }.to_h
